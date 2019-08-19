@@ -41,6 +41,7 @@ fi
 if lsb_release -c | grep -q xenial
 then
     # Install ruby
+    cd /tmp
     sudo wget https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.1.tar.gz
     tar xf ruby-2.4.1.tar.gz
     sudo mkdir /opt/ruby-2.4.1
