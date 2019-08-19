@@ -41,9 +41,15 @@ fi
 if lsb_release -c | grep -q xenial
 then
     # Install ruby
-    sudo apt-get install ruby2.4 ruby-dev --yes
-    sudo ln -sf /usr/bin/ruby2.4 /usr/bin/ruby
-    sudo ln -sf /usr/bin/gem2.4 /usr/bin/gem
+    sudo wget https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.1.tar.gz
+    tar xf ruby-2.4.1.tar.gz
+    sudo mkdir /opt/ruby-2.4.1
+    cd ruby-2.4.1
+    ./configure --prefix=/opt/ruby-2.4.1 --disable-install-doc
+    make
+    sudo make install
+    sudo ln -sf /opt/ruby-2.4.1/bin/ruby /usr/bin/ruby
+    sudo ln -sf /opt/ruby-2.4.1/bin/gem /usr/bin/gem
 fi
 
 sudo gem install rake rubocop ruby-lint scss_lint
