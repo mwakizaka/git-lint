@@ -9,3 +9,5 @@ dist/
 experimental/
 .eggs/
 .DS_Store
+.idea
+.python-version
