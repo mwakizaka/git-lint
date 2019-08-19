@@ -41,9 +41,9 @@ fi
 if lsb_release -c | grep -q xenial
 then
     # Install ruby
-    sudo apt-get install ruby2.3 ruby-dev --yes
-    sudo ln -sf /usr/bin/ruby2.3 /usr/bin/ruby
-    sudo ln -sf /usr/bin/gem2.3 /usr/bin/gem
+    sudo apt-get install ruby2.4 ruby-dev --yes
+    sudo ln -sf /usr/bin/ruby2.4 /usr/bin/ruby
+    sudo ln -sf /usr/bin/gem2.4 /usr/bin/gem
 fi
 
 sudo gem install rake rubocop ruby-lint scss_lint
