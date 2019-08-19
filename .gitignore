@@ -11,3 +11,5 @@ experimental/
 .DS_Store
 .idea
 .python-version
+.gitlint.yaml
+pylintrc
