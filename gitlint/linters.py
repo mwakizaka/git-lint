@@ -73,7 +73,8 @@ def lint_command(name, program, arguments, filter_regex, filename, lines):
 
     Returns: dict: a dict with the extracted info from the message.
     """
-    output = utils.get_output_from_cache(name, filename)
+    # output = utils.get_output_from_cache(name, filename)
+    output = None
 
     if output is None:
         call_arguments = [program] + arguments + [filename]
